@@ -51,7 +51,7 @@ function App() {
 
     if (account) {
       const balance = await web3?.eth?.getBalance(account);
-      setBalance(balance);
+      setBalance((balance/1e18).toFixed(4));
     }
   }
 
