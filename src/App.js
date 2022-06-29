@@ -57,6 +57,8 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Vaccine Passport</h1>
+      <h3>Welcome to the blockchain powered web application</h3>
       <p>Your account is: {account}</p>
       <p>Your balance is: {balance}</p>
       <p>Your network is: {network}</p>
