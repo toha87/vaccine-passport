@@ -61,14 +61,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{textAlign: 'center'}}>
       <h1>Vaccine Passport</h1>
       <h3>Welcome to the blockchain powered web application</h3>
       <br/>
       <button onClick={fetchVaccineName}>Get Vaccine Name</button>
       <br/>
       {
-        vaccineName && <h3>Latest Vaccine Name: {vaccineName}</h3>
+        vaccineName && <h4>Latest Vaccine Name: {vaccineName}</h4>
       }
       <br/>
       <input
