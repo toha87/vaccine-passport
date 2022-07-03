@@ -7,7 +7,7 @@ async function main() {
 
   await vaccinePassport.deployed();
 
-  console.log("Greeter deployed to:", vaccinePassport.address);
+  console.log("Vaccine Passport deployed to:", vaccinePassport.address);
 }
 
 main()
