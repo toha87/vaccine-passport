@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {ethers} from "ethers";
 import VaccinePassport from './artifacts/contracts/VaccinePassport.sol/VaccinePassport.json';
 
-const greeterAddress = "0x3530C1db973F93Fd93e61D4547485C0e3A236f32";
+const contractAddress = "0x3530C1db973F93Fd93e61D4547485C0e3A236f32";
 
 /**
  * @description This is the main component of the application.
@@ -25,7 +25,7 @@ function App() {
     if (typeof window?.ethereum !== "undefined") {
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const contract = new ethers.Contract(greeterAddress, VaccinePassport.abi, provider);
+      const contract = new ethers.Contract(contractAddress, VaccinePassport.abi, provider);
 
       try {
         const data = await contract.getVaccineName();
@@ -51,7 +51,7 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
 
-      const contract = new ethers.Contract(greeterAddress, VaccinePassport.abi, signer);
+      const contract = new ethers.Contract(contractAddress, VaccinePassport.abi, signer);
       const transaction = await contract.setVaccineName(vaccineName);
 
       setVaccineName("");
