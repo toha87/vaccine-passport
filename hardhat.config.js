@@ -24,6 +24,10 @@ module.exports = {
   networks: {
     hardhat: {
       chainId: 1337,
+    },
+    ropsten: {
+      url: process.env.INFURA_URL,
+      accounts: [process.env.ACCOUNT_KEY]
     }
   }
 };
