@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ethers} from "ethers";
-import VaccinePassport from './artifacts/contracts/VaccinePassport.sol/VaccinePassport.json';
+import VaccinePassport from './VaccinePassport.json';
 
 const contractAddress = "0x3530C1db973F93Fd93e61D4547485C0e3A236f32";
 
